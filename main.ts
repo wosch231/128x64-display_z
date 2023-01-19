@@ -13,3 +13,8 @@ input.onButtonPressed(Button.B, function () {
 })
 basic.showIcon(IconNames.Surprised)
 kitronik_VIEW128x64.clear()
+let win = 360 / 5
+let z = [0, 1, 0]
+for (let Index = 0; Index <= 4; Index++) {
+    z.insertAt(Index, 11)
+}
