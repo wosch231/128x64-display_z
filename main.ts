@@ -35,7 +35,10 @@ input.onButtonPressed(Button.AB, function () {
     basic.pause(100)
 })
 input.onButtonPressed(Button.B, function () {
-    oled_z.Kreis(64, 32, 31)
+    oled_z.oled_Line1(54, 32, 74, 32)
+    oled_z.oled_Line1(64, 22, 64, 42)
+    oled_z.oled_Line1(57, 25, 71, 39)
+    oled_z.oled_Line1(57, 39, 71, 25)
 })
 let y: number[] = []
 let x: number[] = []
@@ -46,7 +49,4 @@ let r = 0
 let win = 0
 basic.showIcon(IconNames.Surprised)
 kitronik_VIEW128x64.clear()
-oled_z.oled_Line1(54, 32, 74, 32)
-oled_z.oled_Line1(64, 22, 64, 42)
-oled_z.oled_Line1(57, 25, 71, 39)
-oled_z.oled_Line1(57, 39, 71, 25)
+oled_z.Kreis(64, 32, 31)
