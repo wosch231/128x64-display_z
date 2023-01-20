@@ -7,7 +7,6 @@ input.onButtonPressed(Button.A, function () {
     oled_z.oled_Line1(46, 57, 64, 0)
 })
 input.onButtonPressed(Button.AB, function () {
-    kitronik_VIEW128x64.clear()
     x = [
     64,
     82,
@@ -26,7 +25,7 @@ input.onButtonPressed(Button.AB, function () {
     ]
     xarr = x
     yarr = y
-    oled_z.znullp(10, 0)
+    oled_z.znullp(-30, 10)
     // macheEtwas()
     oled_z.zlinie(xarr.length)
 })

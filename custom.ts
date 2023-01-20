@@ -117,8 +117,8 @@ namespace oled_z {
             yy = yarr[i]
             zkoord(xx, yy)
             oled_Line1(lx,ly,ix,iy)
-            lx=xx
-            ly=yy
+            lx=ix
+            ly=iy
         }
     }
 
