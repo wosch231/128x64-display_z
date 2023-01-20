@@ -10,15 +10,16 @@
 
 //% weight=100 color=#0fbc11 icon="\uf14b" block="128x64 Display_z"
 namespace oled_z {
-    let zpar: number[] = [];
-    zpar[0] =   1;   // Maßstab x-Achse
-    zpar[1] =   1;   // Maßstab y-Achse
-    zpar[2] =   0;   // Nullpunt x-Achse
-    zpar[3] =   0;   // Nullpunt y-Achse
-    zpar[4] =   0;   // Drehwinkel zu x-Achse
-    zpar[5] =   0;   // Drehwinkel zu y-Achse
+    let zpar = [1.0,1.0,0.0,0.0,0.0,0.0,1.1];
+/*
+    zpar[0] = 1.0;   // Maßstab x-Achse
+    zpar[1] = 1.0;   // Maßstab y-Achse
+    zpar[2] = 0.0;   // Nullpunt x-Achse
+    zpar[3] = 0.0;   // Nullpunt y-Achse
+    zpar[4] = 0.0;   // Drehwinkel zu x-Achse
+    zpar[5] = 0.0;   // Drehwinkel zu y-Achse
     zpar[6] = 1.1;   // Strichart . Werkzeugnummer (Strichbreite)
-
+*/
     let lx: number
     let ly: number
     let ix:number
@@ -57,7 +58,7 @@ namespace oled_z {
     //% nrpar.min=0 nrpar.max=6
     //% wert.min=0 wert.max=6
     //% weight=100 blockGap=8
-    export function zparneu(nrpar:number, wert:number){
+    export function zparneu(nrpar:number, wert:any){
         if (nrpar <= 0 && nrpar >6) return
         zpar[nrpar]=wert
     }
@@ -69,7 +70,7 @@ namespace oled_z {
     //% block="Setze den Maßstab auf xm %XM und ym %YM"
     //% inlineInputMode=inline
     //% weight=90 blockGap=8
-    export function zmassb(xm:number, ym:number){
+    export function zmassb(xm:any, ym:any){
         zparneu(0,xm)
         zparneu(1,ym)
     }
@@ -93,7 +94,7 @@ namespace oled_z {
     //% block="Setze den Drehwinkel für x-Achse %xw und y-Achse %yw"
     //% inlineInputMode=inline
     //% weight=70 blockGap=8
-    export function zdrehw(xw:number, yw:number) {
+    export function zdrehw(xw:any, yw:any) {
         zparneu(4, xw)
         zparneu(5, yw)
     }
