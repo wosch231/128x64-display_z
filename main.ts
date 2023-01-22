@@ -1,4 +1,4 @@
-/*
+
 input.onButtonPressed(Button.A, function () {
     kitronik_VIEW128x64.setPixel(64, 32)
     oled_z.oled_Line1(64, 0, 82, 57)
@@ -43,4 +43,4 @@ let x: number[] = []
 basic.showIcon(IconNames.Surprised)
 kitronik_VIEW128x64.clear()
 // oled_z.oled_Kreis(64, 32, 31)
-*/
+
