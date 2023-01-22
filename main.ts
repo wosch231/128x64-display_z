@@ -41,4 +41,4 @@ let y: number[] = []
 let x: number[] = []
 basic.showIcon(IconNames.Surprised)
 kitronik_VIEW128x64.clear()
-oled_z.oled_Kreis(64, 32, 31)
+// oled_z.oled_Kreis(64, 32, 31)
